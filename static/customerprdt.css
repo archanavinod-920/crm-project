@@ -1,0 +1,78 @@
+body{
+    background-color:#FFF8FA;
+    font-family:'Times New Roman', Times, serif;
+    color:#4A4A4A;
+    margin:0;
+    padding:0;
+    text-align:center;
+}body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-image:url("https://cdn.britannica.com/35/222035-050-C68AD682/makeup-cosmetics.jpg");
+    background-size:cover;
+    background-position:center;
+    opacity:0.2;
+    z-index:-1;
+}
+.navbar{
+    display:flex;
+    background-color:#f75088;
+    padding:10px 20px;
+}
+.navbar h1{
+    margin:auto;
+}
+.banner{
+    background-color:#F7D6E0;
+    padding:30px;
+}
+.banner h1{
+    color:#C06C84;
+}
+.tag{
+    position:relative;
+    background-color:#ffd6e3;
+    color:white;
+    padding:5px 10px;
+    border-radius:15px;
+    font-size:12px;
+}
+.price{
+    font-size:22px;
+    font-weight:bold;
+    color:#ff5d8f;
+}
+button{
+    padding:10px;
+    margin:5px;
+    background-color:#f0c9d1;
+    color:rgb(78, 71, 71);
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+}
+button:hover{
+    background-color:#C06C84;
+}
+.products{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    padding:20px;
+}
+.card{
+    width:220px;
+    background:white;
+    border:1px solid #EBC6D3;
+    border-radius:15px;
+    padding:15px;
+}
+.card h3{
+    color:#C06C84;
+}
+    

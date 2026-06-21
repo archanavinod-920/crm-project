@@ -1,0 +1,87 @@
+/* Invoice Page */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6fc;
+    margin: 0;
+    
+    color: #333;
+}
+
+.invoice-container {
+    max-width: 900px;
+    margin: auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #e54698;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #e546ab;
+    padding-bottom: 10px;
+}
+
+.invoice-details {
+    margin-bottom: 25px;
+    line-height: 1.8;
+}
+
+.invoice-details strong {
+    color: #e83c73
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th {
+    background-color: #cb5f7e;
+    color: white;
+    padding: 12px;
+    text-align: center;
+}
+
+table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+table tr:nth-child(even) {
+    background-color: #f8f9ff;
+}
+
+table tr:hover {
+    background-color: #eef1ff;
+}
+
+.grand-total {
+    margin-top: 25px;
+    text-align: right;
+    font-size: 22px;
+    font-weight: bold;
+    color: #c35276;
+}
+
+.print-btn {
+    display: block;
+    width: 180px;
+    margin: 30px auto 0;
+    padding: 12px;
+    border: none;
+    background-color: #ff5d8f;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.print-btn:hover {
+    background-color: #a3306d;
+}
