@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Products</title>
+    <link rel="stylesheet" href="../static/customerprdt.css">
+</head>
+<body>
+
+<div class="navbar">
+    <h1 style="color: white;margin-left: 600px;">Cosmetic Store</h1>
+    <a href="/cart"><button>Cart</button></a>
+    <form action="/profile" method="GET"> <button>Profile</button></form>
+    <button onclick="logoutConfirm()">Logout</button>   
+</div>
+
+<div class="banner">
+    <h1>✨ Glow Beauty ✨</h1>
+    <p>Shop Your Favourite Products</p>
+</div>
+
+<h2>Categories</h2>
+
+<a href="/skincare"><button>Skincare</button></a>
+<a href="/makeup"><button>Makeup</button></a>
+<a href="/haircare"><button>Haircare</button></a>
+<a href="/fragrance"><button>Fragrance</button></a>
+
+<hr>
+
+<h2>Featured Products</h2>
+
+<div class="products">
+        <div class="card">
+            <span class="tag">Best Seller 🔥</span>
+            <img src="https://tse3.mm.bing.net/th/id/OIP.JK_5PYCnlksVXfREkjOjGQHaHa?pid=Api&P=0&h=180">
+            <h3>Lipstick</h3>
+            <p class="price">₹1299</p>
+            <form action="/addprod" method="post">
+                <input type="hidden" name="name" value="Lipstick">
+                <input type="hidden" name="price" value="1299">
+                <input type="hidden" name="image" value="https://tse3.mm.bing.net/th/id/OIP.JK_5PYCnlksVXfREkjOjGQHaHa?pid=Api&P=0&h=180">
+                <button>Add Cart</button>
+            </form>
+        </div>
+        <div class="card">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.RhXaMMF__6IsozpAkO7QhAHaHa?pid=Api&P=0&h=180">
+            <h3>Face Wash</h3>
+            <p class="price">₹199</p>
+            <form action="/addprod" method="post">
+                <input type="hidden" name="name" value="Face Wash">
+                <input type="hidden" name="price" value="199">
+                <input type="hidden" name="image" value="https://tse3.mm.bing.net/th/id/OIP.RhXaMMF__6IsozpAkO7QhAHaHa?pid=Api&P=0&h=180">
+                <button>Add Cart</button>
+            </form>
+        </div>
+        <div class="card">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.Dg9Y0raB4eUiu8SAmPXV0gHaHa?pid=Api&P=0&h=180">
+            <h3>Eyeliner</h3>
+            <p class="price">₹210</p>
+            <form action="/addprod" method="post">
+                <input type="hidden" name="name" value="Eyeliner">
+                <input type="hidden" name="price" value="210">
+                <input type="hidden" name="image" value="https://tse1.mm.bing.net/th/id/OIP.Dg9Y0raB4eUiu8SAmPXV0gHaHa?pid=Api&P=0&h=180">
+                <button>Add Cart</button>
+            </form>
+        </div>
+        <div class="card">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.PCMFxoZcdW0SjqsSP4SQLgHaHa?pid=Api&P=0&h=180">
+            <h3>Sheet Mask</h3>
+            <p class="price">₹110</p>
+            <form action="/addprod" method="post">
+                <input type="hidden" name="name" value="Sheet Mask">
+                <input type="hidden" name="price" value="110">
+                <input type="hidden" name="image" value="https://tse3.mm.bing.net/th/id/OIP.PCMFxoZcdW0SjqsSP4SQLgHaHa?pid=Api&P=0&h=180">
+                <button>Add Cart</button>
+            </form>
+        </div>
+        <div class="card">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.WElm4nvtJipn1JrhyPlReQHaHa?pid=Api&P=0&h=180">
+            <h3>Mascara</h3>
+            <p class="price">₹299</p>
+            <form action="/addprod" method="post">
+                <input type="hidden" name="name" value="Mascara">
+                <input type="hidden" name="price" value="299">
+                <input type="hidden" name="image" value="https://tse1.mm.bing.net/th/id/OIP.WElm4nvtJipn1JrhyPlReQHaHa?pid=Api&P=0&h=180">
+                <button>Add Cart</button>
+            </form>
+        </div>
+        <div class="card">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.Zl6yLxU_CRkXXeunsjYJ6AHaGB?pid=Api&P=0&h=180">
+            <h3>Perfume</h3>
+            <p class="price">₹689</p>
+            <form action="/addprod" method="post">
+                <input type="hidden" name="name" value="Perfume">
+                <input type="hidden" name="price" value="689">
+                <input type="hidden" name="image" value="https://tse1.mm.bing.net/th/id/OIP.Zl6yLxU_CRkXXeunsjYJ6AHaGB?pid=Api&P=0&h=180">
+                <button>Add Cart</button>
+            </form>
+        </div>
+        <div class="card">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.WOmDnH1qR16hAtO5KxbaUwHaHa?pid=Api&P=0&h=180">
+            <h3>Lipstick</h3>
+            <p class="price">₹420</p>
+            <form action="/addprod" method="post">
+                <input type="hidden" name="name" value="Lipstick">
+                <input type="hidden" name="price" value="420">
+                <input type="hidden" name="image" value="https://tse2.mm.bing.net/th/id/OIP.WOmDnH1qR16hAtO5KxbaUwHaHa?pid=Api&P=0&h=180">
+                <button>Add Cart</button>
+            </form>
+        </div>
+
+</div>
+<script>
+function logoutConfirm() {
+    let result = confirm("Are you sure you want to logout?");
+
+    if(result) {
+        window.location.href = "/logout";
+    }
+}
+</script>
+
+</body>
+</html>

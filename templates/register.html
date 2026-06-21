@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Registration</title>
+     <link rel="stylesheet"
+      href="{{ url_for('static', filename='register.css') }}">
+</head>
+<body>
+    <div>
+        <h2>Customer Registration</h2>
+        <div class="box ">
+        <form>
+                <label>Customer Name</label>
+                <input type="text" ><br><br>
+                <label>Phone Number</label>
+                <input type="tel" ><br><br>
+                <label>Email</label>
+                <input type="email"><br><br>
+                <label>Date of Birth</label>
+                <input type="date"><br><br>
+                <label>Gender</label>
+                <input class="rad" type="radio" name="gender">Male
+                <input class="rad" type="radio" name="gender">Female
+                <input class="rad" type="radio" name="gender">Other
+                <br><br>
+                <label>Skin Type</label>
+                <select>
+                    <option>Select Skin Type</option>
+                    <option>Dry</option>
+                    <option>Oily</option>
+                    <option>Combination</option>
+                    <option>Normal</option>
+                </select>
+                <br><br>
+                <label>Preferred Category</label>
+                <select>
+                    <option>Skincare</option>
+                    <option>Haircare</option>
+                    <option>Makeup</option>
+                </select>
+                <br><br>
+                <label>Address</label><br>
+                <textarea rows="4" placeholder="Enter your address"></textarea>
+                <br><br>
+                <label>Password</label>
+                <input type="password" placeholder="enter password"><br><br>
+                <label>Confirm Password</label>
+                <input type="password" placeholder="confirm password"><br><br>
+                <button type="submit">Register</button><br><br>
+                Already have an account?
+                <a href="#">Login Here</a>
+            </form>
+            </div>
+    </div>
+</body>
+</html>

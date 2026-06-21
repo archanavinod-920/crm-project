@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <style>
+        nav{
+            background-color:#e91e63;
+            padding:15px;
+            text-align:center;
+        }
+
+        nav h2{
+            color:white;
+            margin:0 0 10px 0;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:15px;
+        }
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='invoice.css') }}">
+</head>
+<body>
+    <nav>
+        <h2>CRM System</h2>
+        <a href="/admin_dashboard">Home</a>
+        <a href="/addproduct">Products</a>
+        <a href="/customers">Customers</a>
+        <a href="/inventory">Inventory</a>
+        <a href="sales">Sales</a>
+        <a href="invoice">Invoices</a>
+        <button onclick="logoutConfirm()">Logout</button>
+    </nav>
+
+<div class="invoice-container">
+
+    <h1>Invoice</h1>
+
+    <div class="invoice-details">
+        <p><strong>Invoice No:</strong> INV001</p>
+        <p><strong>Customer:</strong> John</p>
+        <p><strong>Date:</strong> 10-06-2026</p>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Foundation</td>
+                <td>2</td>
+                <td>₹500</td>
+                <td>₹1000</td>
+            </tr>
+
+            <tr>
+                <td>Lipstick</td>
+                <td>1</td>
+                <td>₹350</td>
+                <td>₹350</td>
+            </tr>
+
+            <tr>
+                <td>Face Wash</td>
+                <td>1</td>
+                <td>₹250</td>
+                <td>₹250</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="grand-total">
+        Grand Total: ₹1600
+    </div>
+
+    <button class="print-btn" onclick="window.print()">
+        Print Invoice
+    </button>
+
+</div>
+
+</body>
+</html>
+```

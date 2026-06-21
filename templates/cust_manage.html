@@ -1,1 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Management</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='cust_manage.css')}}">
+    <style>
+        nav{
+            background-color:#e91e63;
+            padding:15px;
+            text-align:center;
+        }
 
+        nav h2{
+            color:white;
+            margin:0 0 10px 0;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:15px;
+        }
+    </style>
+    
+</head>
+<body>
+    <nav>
+        <h2>CRM System</h2>
+        <a href="/admin_dashboard">Home</a>
+        <a href="/addproduct">Products</a>
+        <a href="/customers">Customers</a>
+        <a href="/inventory">Inventory</a>
+        <a href="sales">Sales</a>
+        <a href="invoice">Invoices</a>
+        <button onclick="logoutConfirm()">Logout</button>
+    </nav>
+    
+    <div class="container">
+        <h2>Customer Management</h2>
+       <form action="/search" method="GET">
+        <div class="sbox">
+                <input  type="text" name="search" placeholder="Search by name or phone">
+                <button type="submit">Search</button>
+        </div>
+       </form> 
+       
+        <div class="form-container">   
+            <h3>Add Customer</h3>
+            <form action="/add" method="POST">
+                <label>Customer Name</label>
+                <input type="text" name="name" ><br><br>
+                <label>Phone Number</label>
+                <input type="tel" name="phone"><br><br>
+                <label>Email</label>
+                <input type="email" name="email"><br><br>
+                
+                <label>Gender</label>
+                <input class="rad" type="radio" name="gender">Male
+                <input class="rad" type="radio" name="gender">Female
+                <input class="rad" type="radio" name="gender">Other
+                <br><br>
+                <label>Skin Type</label>
+                <select name="skin">
+                    <option>Select Skin Type</option>
+                    <option>Dry</option>
+                    <option>Oily</option>
+                    <option>Combination</option>
+                    <option>Normal</option>
+                </select>
+                <br><br>
+                <label>Address</label><br>
+                <textarea rows="4" name="address"></textarea>
+                <br><br>
+                <button class="btn" type="submit">Add Customer</button>
+            </form>
+        </div>
+        <h2>Customer Records</h2>
+        <div class="sbox">
+            <a href="/customers">
+                 <button>Show All</button>
+            </a>
+        </div>
+        <table id="customerTable">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Skin</th>
+                <th>Action</th>
+            </tr>
+        {% for customer in customers %}
+
+            <tr>
+
+            <td>{{customer[0]}}</td>
+            <td>{{customer[1]}}</td>
+            <td>{{customer[2]}}</td>
+            <td>{{customer[3]}}</td>
+            <td>{{customer[5]}}</td>
+
+            <td class="actbtn">
+            <a href="/edit/{{customer[0]}}">
+            <button class="ebtn">Edit</button>
+            </a>
+            <a href="/delete/{{customer[0]}}" onclick="return confirm('Are you sure you want to delete this customer?')"> 
+            <button class="dbtn">Delete</button>
+            </a>
+            <a href="/history/{{customer[0]}}">
+            <button class="history-btn">Purchase history</button>
+            </a>
+            </td>
+
+            </tr>
+
+        {% endfor %}
+        </table>
+    </div>
+    <script src="cust_manage.js"></script>
+</body>
+</html>

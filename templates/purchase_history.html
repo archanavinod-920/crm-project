@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Purchase History</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='purchase_history.css')}}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Purchase History</h1>
+
+    <div class="customer-card">
+        <h3>Customer Details</h3>
+        <p><strong>Name:</strong> {{ customer[1] }}</p>
+        <p><strong>Phone:</strong> {{ customer[2] }}</p>
+        <p><strong>Email:</strong> {{ customer[3] }}</p>
+    </div>
+
+    <table border="1">
+    <tr>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Amount</th>
+        <th>Date</th>
+    </tr>
+
+    {% for item in history %}
+    <tr>
+        <td>{{ item[0] }}</td>
+        <td>{{ item[1] }}</td>
+        <td>₹{{ item[2] }}</td>
+        <td>{{ item[3] }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+</div>
+
+</body>
+</html>

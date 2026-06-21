@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRM Admin Dashboard</title>
+    <style>
+      body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background-color:#fff5f7;
+}
+
+nav{
+    background-color:#e91e63;
+    padding:15px;
+    text-align:center;
+}
+
+nav h2{
+    color:white;
+    margin:0 0 10px 0;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+}
+
+.hero{
+    background-color:#f48fb1;
+    color:white;
+    text-align:center;
+    padding:60px;
+}
+
+.title{
+    text-align:center;
+    color:#c2185b;
+    margin-top:30px;
+}
+
+.cards{
+    text-align:center;
+}
+
+.card{
+    display:inline-block;
+    width:220px;
+    background:white;
+    margin:15px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 5px lightgray;
+    border-top:5px solid #e91e63;
+}
+
+.card h3{
+    color:#c2185b;
+}
+
+.card p{
+    font-size:22px;
+    font-weight:bold;
+}
+button{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding:10px;
+    margin:5px;
+    background-color:#f5e8eb;
+    color:rgb(7, 7, 7);
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+button:hover{
+    background-color:#C06C84;
+}
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h2>CRM System</h2>
+        <a href="/admin_dashboard">Home</a>
+        <a href="/prdthome">Products</a>
+        <a href="/customers">Customers</a>
+        <a href="/inventory">Inventory</a>
+        <a href="sales">Sales</a>
+        <a href="invoice">Invoices</a>
+        <button onclick="logoutConfirm()">Logout</button>
+    </nav>
+    <script>
+    function logoutConfirm() {
+        let result = confirm("Are you sure you want to logout?");
+
+        if(result) {
+            window.location.href = "/logout";
+        }
+    }
+    </script>
+    
+
+    <div class="hero">
+        <h1>Admin Dashboard</h1>
+        <p>Manage Customers, Products, Inventory, Sales and Invoices</p>
+    </div>
+
+    <h2 class="title">Dashboard Overview</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Total Customers</h3>
+            <p>120</p>
+        </div>
+
+        <div class="card">
+            <h3>Total Products</h3>
+            <p>80</p>
+        </div>
+
+        <div class="card">
+            <h3>Available Inventory</h3>
+            <p>350</p>
+        </div>
+
+        <div class="card">
+            <h3>Total Sales</h3>
+            <p>₹75,000</p>
+        </div>
+
+        <div class="card">
+            <h3>Total Invoices</h3>
+            <p>65</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

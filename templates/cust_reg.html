@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Registration</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='cust_reg.css')}}">
+</head>
+<body>
+    <div>
+        <h2>Customer Registration</h2>
+        <div class="box ">
+        <form action="/register" method="POST">
+                <label>Customer Name</label>
+                <input type="text" name="username"><br><br>
+                <label>Phone Number</label>
+                <input type="tel" name="phone"><br><br>
+                <label>Email</label>
+                <input type="email" name="email"><br><br>
+                <label>Date of Birth</label>
+                <input type="date" name="dob"><br><br>
+                <label>Gender</label>
+                <input class="rad" type="radio" name="gender" value="Male">Male
+                <input class="rad" type="radio" name="gender" value="Female">Female
+                <input class="rad" type="radio" name="gender" value="Other">Other
+                <br><br>
+                <label>Skin Type</label>
+                <select name="skin_type">
+                    <option>Select Skin Type</option>
+                    <option>Dry</option>
+                    <option>Oily</option>
+                    <option>Combination</option>
+                    <option>Normal</option>
+                </select>
+                <br><br>
+                <label>Preferred Category</label>
+                <select name="category">
+                    <option>Skincare</option>
+                    <option>Haircare</option>
+                    <option>Makeup</option>
+                </select>
+                <br><br>
+                <label>Address</label><br>
+                <textarea rows="4" name="address" placeholder="Enter your address"></textarea>
+                <br><br>
+                <label>Password</label>
+                <input type="password" name="password" placeholder="enter password"><br><br>
+                <label>Confirm Password</label>
+                <input type="password" name="confirm_password" placeholder="confirm password"><br><br>
+                <button type="submit">Register</button><br><br>
+                Already have an account?
+                <a href="#">Login Here</a>
+            </form>
+            </div>
+    </div>
+</body>
+</html>
